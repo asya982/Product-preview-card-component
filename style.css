@@ -18,29 +18,117 @@ body{
 
 .card{
     background-color: hsl(0, 0%, 100%);
-    width: 45%;
+    width: 50%;
+    height: auto;
     display: flex;
     flex-direction: row;
-    justify-items: center;
-    justify-content: center;
+    align-items: center;
     border-radius: 10px;
+
 }
 
 .capture-row{
     display: flex;
+    width: 50%;
     flex-direction: column;
-    margin: 10px 10px;
+    padding: 15px 25px;
+    color: hsl(228, 12%, 48%);
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+}
+
+.img-row{
+    width: 100%;
+    height: auto;
 }
 
 img{
-    width: 100%;
-    
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
 }
 
 #mobile-img{
     display: none;
 }
 
-h1{
+.capture-row h1{
     font-family: 'Fraunces', serif;   
+    color: hsl(212, 21%, 14%);
+    font-size: 30px;
+}
+
+.capture-row h6{
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.5em;
+    font-size: 14px;
+
+}
+
+h3{
+    color:hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;  
+    font-size: 30px;
+    display: flex;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: small;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    padding-left: 3%;
+    justify-content: start;
+    
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    border: 1px solid hsl(158, 36%, 37%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    padding: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20vw;
+}
+
+.material-symbols-outlined{
+    padding-right: 10px;
+}
+
+button:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+
+@media all and (max-width: 600px){
+    .card{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .card .capture-row{
+        margin: auto;
+        width: 80%;
+    }
+
+    #mobile-img{
+        display: block;
+    }
+
+    img{
+        border-radius: 10px 10px 0 0;
+    }
+
+    #desctop-img{
+        display: none;
+    }
+
+
 }
